@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin, Phone, Mail, GraduationCap, Facebook, Twitter, Instagram, Linkedin, Search, ChevronRight } from 'lucide-react';
+import { Link } from '@inertiajs/react';
 
 export default function PublicLayout({ children }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function PublicLayout({ children }) {
             <nav className="sticky top-0 z-50 bg-white shadow-md w-full">
                 <div className="container mx-auto px-6 h-20 flex justify-between items-center">
                     {/* Logo */}
-                    <a href="/" className="flex items-center gap-2 group">
+                    <Link href="/" className="flex items-center gap-2 group">
                         <div className="p-2 rounded-full bg-orange-50 border border-orange-100 group-hover:bg-orange-100 transition-colors">
                             <GraduationCap className="w-8 h-8 text-orange-600" />
                         </div>
@@ -38,30 +39,30 @@ export default function PublicLayout({ children }) {
                                 Excellence in Education
                             </span>
                         </div>
-                    </a>
+                    </Link>
 
                     {/* Desktop Menu */}
                     <div className="hidden lg:flex items-center gap-8">
                         {/* Navigation Links */}
                         <div className="flex items-center gap-8 text-sm font-bold uppercase tracking-wide text-slate-600">
                             {[
-                                { name: 'Home', active: true },
-                                { name: 'About Us', active: false },
-                                { name: 'Academics', active: false },
-                                { name: 'Admissions', active: false },
-                                { name: 'Facilities', active: false },
-                                { name: 'Gallery', active: false },
+                                { name: 'Home', href: '/', active: true },
+                                { name: 'About Us', href: '/about-us', active: false },
+                                { name: 'Academics', href: '/academics', active: false },
+                                { name: 'Admissions', href: '/admissions', active: false },
+                                { name: 'Facilities', href: '/facilities', active: false },
+                                { name: 'Gallery', href: '/gallery', active: false },
                             ].map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
-                                    href="#"
+                                    href={link.href}
                                     className={`py-2 border-b-2 transition-all duration-300 ${link.active
                                         ? 'text-orange-600 border-orange-500'
                                         : 'border-transparent hover:text-orange-600 hover:border-orange-200'
                                         }`}
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
                         </div>
 
@@ -70,9 +71,9 @@ export default function PublicLayout({ children }) {
                             <Search className="w-5 h-5" />
                         </button>
 
-                        <button className="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-orange-200 hover:bg-slate-800 hover:shadow-slate-200 transition-all transform hover:-translate-y-0.5">
+                        <Link href="/contact-us" className="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-orange-200 hover:bg-slate-800 hover:shadow-slate-200 transition-all transform hover:-translate-y-0.5">
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -87,19 +88,31 @@ export default function PublicLayout({ children }) {
                 {/* Mobile Menu Dropdown */}
                 <div className={`lg:hidden bg-white border-t border-slate-100 overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'}`}>
                     <div className="flex flex-col p-6 gap-4">
-                        {['Home', 'About Us', 'Academics', 'Admissions', 'Facilities', 'Gallery'].map((item) => (
-                            <a
-                                key={item}
-                                href="#"
+                        {[
+                            { name: 'Home', href: '/' },
+                            { name: 'About Us', href: '/about-us' },
+                            { name: 'Academics', href: '/academics' },
+                            { name: 'Admissions', href: '/admissions' },
+                            { name: 'Facilities', href: '/facilities' },
+                            { name: 'Gallery', href: '/gallery' }
+                        ].map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-slate-600 font-bold hover:text-orange-600 hover:bg-orange-50 p-3 rounded-lg transition-colors flex items-center justify-between"
                             >
-                                {item}
+                                {item.name}
                                 <ChevronRight className="w-4 h-4 opacity-50" />
-                            </a>
+                            </Link>
                         ))}
-                        <button className="bg-orange-600 text-white w-full py-3 rounded-lg font-bold shadow-md">
+                        <Link
+                            href="/contact-us"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="bg-orange-600 text-white w-full py-3 rounded-lg font-bold shadow-md text-center"
+                        >
                             Contact Us
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </nav>
@@ -135,12 +148,19 @@ export default function PublicLayout({ children }) {
                         <div>
                             <h4 className="text-lg font-bold mb-6 text-white border-l-4 border-orange-500 pl-3">Quick Links</h4>
                             <ul className="space-y-4">
-                                {['About Us', 'Admissions', 'Academics', 'Campus Life', 'Results', 'Contact'].map((link) => (
-                                    <li key={link}>
-                                        <a href="#" className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2">
+                                {[
+                                    { name: 'About Us', href: '/about-us' },
+                                    { name: 'Admissions', href: '/admissions' },
+                                    { name: 'Academics', href: '/academics' },
+                                    { name: 'Facilities', href: '/facilities' },
+                                    { name: 'Gallery', href: '/gallery' },
+                                    { name: 'Contact Us', href: '/contact-us' }
+                                ].map((link) => (
+                                    <li key={link.name}>
+                                        <Link href={link.href} className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2">
                                             <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
-                                            {link}
-                                        </a>
+                                            {link.name}
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

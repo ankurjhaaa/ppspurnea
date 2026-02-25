@@ -18,7 +18,7 @@ export default function Home() {
             <Head title="Home" />
 
             {/* 1. HERO SECTION: Full Screen & Dark */}
-            <div className="relative min-h-screen flex items-center bg-slate-900 overflow-hidden pt-20 pb-20 lg:pt-0 lg:pb-0">
+            <div className="relative min-h-[90vh] flex items-center bg-slate-900 overflow-hidden pt-16 pb-16 lg:pt-0 lg:pb-0">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img
@@ -58,7 +58,7 @@ export default function Home() {
 
                         {/* RIGHT: Compact Registration Form (Glass/Mast Look) */}
                         <div className="lg:w-1/2 w-full flex justify-center lg:justify-end">
-                            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 lg:p-8 shadow-2xl w-full max-w-md relative overflow-hidden">
+                            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 lg:p-8 shadow-2xl w-full max-w-md relative overflow-hidden">
                                 {/* Decorative glow */}
                                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-orange-500 rounded-full blur-3xl opacity-20"></div>
 
@@ -104,8 +104,8 @@ export default function Home() {
 
             {/* 2. STATS OVERLAP */}
             <div className="bg-white relative z-20">
-                <div className="container mx-auto px-6 -mt-16 lg:-mt-20">
-                    <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center border border-slate-100">
+                <div className="container mx-auto px-6 -mt-12 lg:-mt-16">
+                    <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center border border-slate-100">
                         {[
                             { icon: Users, val: "2500+", label: "Students" },
                             { icon: UserCheck, val: "150+", label: "Teachers" },
@@ -125,20 +125,20 @@ export default function Home() {
             </div>
 
             {/* 3. ABOUT / DISCOVERY SECTION */}
-            <section className="py-24 bg-white overflow-hidden">
+            <section className="py-16 bg-white overflow-hidden">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-center gap-16">
                         <div className="md:w-1/2 relative group">
                             {/* Image Cluster */}
                             <div className="relative">
-                                <div className="absolute -top-6 -left-6 w-full h-full border-4 border-orange-500/20 rounded-4xl"></div>
+                                <div className="absolute -top-4 -left-4 w-full h-full border-4 border-orange-500/20 rounded-3xl"></div>
                                 <img
                                     src="https://motherspet.com/blogs/wp-content/webp-express/webp-images/uploads/2024/08/development-early-learning-870x490.jpg.webp"
                                     alt="Kids Learning"
-                                    className="rounded-4xl shadow-2xl relative z-10 w-full object-cover h-[500px] transform transition-transform duration-700 group-hover:scale-[1.02]"
+                                    className="rounded-3xl shadow-2xl relative z-10 w-full object-cover h-[450px] transform transition-transform duration-700 group-hover:scale-[1.02]"
                                 />
                                 {/* Floating Badge */}
-                                <div className="absolute bottom-10 -right-6 bg-white p-4 rounded-2xl shadow-xl z-20 animate-bounce-slow hidden lg:block">
+                                <div className="absolute bottom-8 -right-4 bg-white p-3 rounded-xl shadow-xl z-20 animate-bounce-slow hidden lg:block">
                                     <div className="flex items-center gap-3">
                                         <div className="bg-green-100 p-2 rounded-lg text-green-600">
                                             <ShieldCheck className="w-6 h-6" />
@@ -195,7 +195,7 @@ export default function Home() {
             </section>
 
             {/* 4. OUR SERVICES - Full Width Colorful Grid */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-16 bg-slate-50">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16 max-w-3xl mx-auto">
                         <span className="text-orange-600 font-bold tracking-widest uppercase text-sm mb-2 block">Our Programs</span>
@@ -212,7 +212,7 @@ export default function Home() {
                             { title: "Sports Academy", desc: "Professional training in various disciplines.", color: "bg-blue-600", icon: Activity },
                             { title: "Arts & Culture", desc: "Expressing creativity through music & dance.", color: "bg-purple-600", icon: Music },
                         ].map((item, idx) => (
-                            <div key={idx} className={`${item.color} rounded-2xl p-8 text-white hover:-translate-y-2 transition-transform duration-300 shadow-xl overflow-hidden relative group`}>
+                            <div key={idx} className={`${item.color} rounded-xl p-8 text-white hover:-translate-y-2 transition-transform duration-300 shadow-xl overflow-hidden relative group`}>
                                 <div className="relative z-10">
                                     <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
                                         <item.icon className="w-8 h-8 text-white" />
@@ -232,7 +232,7 @@ export default function Home() {
             </section>
 
             {/* 5. CAMPUS FACILITIES (Icon Grid) */}
-            <section className="py-24 bg-white">
+            <section className="py-16 bg-white">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold text-slate-900 mb-12">World-Class Facilities</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
@@ -256,7 +256,7 @@ export default function Home() {
             </section>
 
             {/* 6. LIFE AT PPS (Gallery Grid) - NEW */}
-            <section className="py-24 bg-slate-900 text-white overflow-hidden">
+            <section className="py-16 bg-slate-900 text-white overflow-hidden">
                 <div className="container mx-auto px-6">
                     <div className="flex justify-between items-end mb-12">
                         <div>
@@ -270,7 +270,7 @@ export default function Home() {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
                         {/* Large items span 2 cols/rows */}
-                        <div className="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl">
+                        <div className="col-span-2 row-span-2 relative group overflow-hidden rounded-xl">
                             <img src="https://shishyaschool.in/wp-content/uploads/2023/12/sports-1-min-scaled.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
                             <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <h4 className="font-bold text-xl">Annual Sports Day</h4>
@@ -278,16 +278,16 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl">
+                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
                             <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=400&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
                         </div>
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl">
+                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
                             <img src="https://centrepointschools.com/blogs/wp-content/uploads/2024/09/Child-learning-styles.jpg" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
                         </div>
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl">
+                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
                             <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=400&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
                         </div>
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl">
+                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-xl">
                             <img src="https://i0.wp.com/cms.babbel.news/wp-content/uploads/2017/09/LearningPeriod_Header.png?resize=1200%2C675" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Gallery" />
                         </div>
                     </div>
@@ -295,7 +295,7 @@ export default function Home() {
             </section>
 
             {/* 7. FAQ Section */}
-            <section className="py-24 bg-orange-50">
+            <section className="py-16 bg-orange-50">
                 <div className="container mx-auto px-6 max-w-4xl">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
@@ -331,7 +331,7 @@ export default function Home() {
             </section>
 
             {/* 8. FOOTER CTA */}
-            <div className="bg-orange-600 py-16">
+            <div className="bg-orange-600 py-12">
                 <div className="container mx-auto px-6 text-center text-white">
                     <h2 className="text-3xl md:text-4xl font-black mb-6">Ready to Join the PPS Family?</h2>
                     <p className="text-orange-100 text-lg mb-8 max-w-2xl mx-auto">

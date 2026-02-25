@@ -1,0 +1,210 @@
+{
+  "_PublicLayout-kdzd3ES2.js": {
+    "file": "assets/PublicLayout-kdzd3ES2.js",
+    "name": "PublicLayout",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_arrow-right-CVzJ90Qo.js": {
+    "file": "assets/arrow-right-CVzJ90Qo.js",
+    "name": "arrow-right",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_book-open-DKD6e8hF.js": {
+    "file": "assets/book-open-DKD6e8hF.js",
+    "name": "book-open",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_calendar-SQUIrAob.js": {
+    "file": "assets/calendar-SQUIrAob.js",
+    "name": "calendar",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_clock-BQclUFTl.js": {
+    "file": "assets/clock-BQclUFTl.js",
+    "name": "clock",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_heart-BRMfL1fn.js": {
+    "file": "assets/heart-BRMfL1fn.js",
+    "name": "heart",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_shield-check-BGfA9Blk.js": {
+    "file": "assets/shield-check-BGfA9Blk.js",
+    "name": "shield-check",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_terminal-C73SgqGY.js": {
+    "file": "assets/terminal-C73SgqGY.js",
+    "name": "terminal",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_users-DsizK0ih.js": {
+    "file": "assets/users-DsizK0ih.js",
+    "name": "users",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "_zap-DPDn22O1.js": {
+    "file": "assets/zap-DPDn22O1.js",
+    "name": "zap",
+    "imports": [
+      "_PublicLayout-kdzd3ES2.js"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-CMhnwpe_.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.tsx": {
+    "file": "assets/app-BXnatTXt.js",
+    "name": "app",
+    "src": "resources/js/app.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/pages/public/AboutUs.jsx",
+      "resources/js/pages/public/Academics.jsx",
+      "resources/js/pages/public/Admissions.jsx",
+      "resources/js/pages/public/ContactUs.jsx",
+      "resources/js/pages/public/Facilities.jsx",
+      "resources/js/pages/public/Gallery.jsx",
+      "resources/js/pages/public/Home.jsx"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  },
+  "resources/js/pages/public/AboutUs.jsx": {
+    "file": "assets/AboutUs-bLD7RSHp.js",
+    "name": "AboutUs",
+    "src": "resources/js/pages/public/AboutUs.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_PublicLayout-kdzd3ES2.js",
+      "_heart-BRMfL1fn.js",
+      "_book-open-DKD6e8hF.js",
+      "_users-DsizK0ih.js",
+      "_arrow-right-CVzJ90Qo.js"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  },
+  "resources/js/pages/public/Academics.jsx": {
+    "file": "assets/Academics-CA6ak4ty.js",
+    "name": "Academics",
+    "src": "resources/js/pages/public/Academics.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_PublicLayout-kdzd3ES2.js",
+      "_terminal-C73SgqGY.js",
+      "_zap-DPDn22O1.js",
+      "_arrow-right-CVzJ90Qo.js"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  },
+  "resources/js/pages/public/Admissions.jsx": {
+    "file": "assets/Admissions-CdYffiXJ.js",
+    "name": "Admissions",
+    "src": "resources/js/pages/public/Admissions.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_PublicLayout-kdzd3ES2.js",
+      "_calendar-SQUIrAob.js"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  },
+  "resources/js/pages/public/ContactUs.jsx": {
+    "file": "assets/ContactUs-BPp8-7WH.js",
+    "name": "ContactUs",
+    "src": "resources/js/pages/public/ContactUs.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_PublicLayout-kdzd3ES2.js",
+      "_clock-BQclUFTl.js"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  },
+  "resources/js/pages/public/Facilities.jsx": {
+    "file": "assets/Facilities-D6b6dIGP.js",
+    "name": "Facilities",
+    "src": "resources/js/pages/public/Facilities.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_PublicLayout-kdzd3ES2.js",
+      "_terminal-C73SgqGY.js",
+      "_book-open-DKD6e8hF.js",
+      "_shield-check-BGfA9Blk.js",
+      "_heart-BRMfL1fn.js"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  },
+  "resources/js/pages/public/Gallery.jsx": {
+    "file": "assets/Gallery-C65YOW1K.js",
+    "name": "Gallery",
+    "src": "resources/js/pages/public/Gallery.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_PublicLayout-kdzd3ES2.js"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  },
+  "resources/js/pages/public/Home.jsx": {
+    "file": "assets/Home-BMCKGdrr.js",
+    "name": "Home",
+    "src": "resources/js/pages/public/Home.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_PublicLayout-kdzd3ES2.js",
+      "_users-DsizK0ih.js",
+      "_calendar-SQUIrAob.js",
+      "_book-open-DKD6e8hF.js",
+      "_zap-DPDn22O1.js",
+      "_shield-check-BGfA9Blk.js",
+      "_arrow-right-CVzJ90Qo.js",
+      "_clock-BQclUFTl.js"
+    ],
+    "css": [
+      "assets/app-CMhnwpe_.css"
+    ]
+  }
+}
