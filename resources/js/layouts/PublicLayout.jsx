@@ -5,46 +5,45 @@ import { Link } from '@inertiajs/react';
 export default function PublicLayout({ children }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    // Sportyze style is white navbar always, not transparent
     return (
         <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
             {/* Top Bar - Contact Info (Optional but good for schools) */}
-            <div className="bg-slate-900 text-white py-2 text-xs hidden md:block">
-                <div className="container mx-auto px-6 flex justify-between items-center">
-                    <div className="flex items-center gap-6">
-                        <span className="flex items-center gap-2"><Phone className="w-3 h-3" /> +91 98765 43210</span>
-                        <span className="flex items-center gap-2"><Mail className="w-3 h-3" /> admissions@ppspurnea.com</span>
-                    </div>
+            <div className="bg-slate-900 text-white py-1.5 text-[10px] hidden md:block">
+                <div className="container mx-auto px-4 flex justify-between items-center">
                     <div className="flex items-center gap-4">
-                        <a href="#" className="hover:text-orange-400 transition-colors"><Facebook className="w-3 h-3" /></a>
-                        <a href="#" className="hover:text-orange-400 transition-colors"><Twitter className="w-3 h-3" /></a>
-                        <a href="#" className="hover:text-orange-400 transition-colors"><Instagram className="w-3 h-3" /></a>
+                        <span className="flex items-center gap-1.5 opacity-90"><Phone className="w-2.5 h-2.5" /> +91 98765 43210</span>
+                        <span className="flex items-center gap-1.5 opacity-90"><Mail className="w-2.5 h-2.5" /> admissions@ppspurnea.com</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <a href="#" className="hover:text-orange-400 transition-colors"><Facebook className="w-2.5 h-2.5" /></a>
+                        <a href="#" className="hover:text-orange-400 transition-colors"><Twitter className="w-2.5 h-2.5" /></a>
+                        <a href="#" className="hover:text-orange-400 transition-colors"><Instagram className="w-2.5 h-2.5" /></a>
                     </div>
                 </div>
             </div>
 
-            {/* Main Navigation - Sportyze Style (White, Shadow, Centered Links) */}
-            <nav className="sticky top-0 z-50 bg-white shadow-md w-full">
-                <div className="container mx-auto px-6 h-20 flex justify-between items-center">
+            {/* Main Navigation - Compact Style */}
+            <nav className="sticky top-0 z-50 bg-white shadow-sm border-b border-slate-100 w-full">
+                <div className="container mx-auto px-4 h-14 md:h-16 flex justify-between items-center">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
-                        <div className="p-2 rounded-full bg-orange-50 border border-orange-100 group-hover:bg-orange-100 transition-colors">
-                            <GraduationCap className="w-8 h-8 text-orange-600" />
+                        <div className="p-1.5 rounded-md bg-orange-50 border border-orange-100 group-hover:bg-orange-100 transition-colors">
+                            <GraduationCap className="w-6 h-6 text-orange-600" />
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-2xl font-bold leading-none text-slate-800 tracking-tight group-hover:text-orange-600 transition-colors">
-                                Purnea Public <span className="text-orange-600">School</span>
+                            <span className="text-xl font-black leading-none text-slate-800 tracking-tight group-hover:text-orange-600 transition-colors">
+                                Purnea <span className="text-orange-600">Public</span> School
                             </span>
-                            <span className="text-[10px] font-bold tracking-widest uppercase text-slate-400">
+                            <span className="text-[8px] font-bold tracking-widest uppercase text-slate-400">
                                 Excellence in Education
                             </span>
                         </div>
                     </Link>
 
                     {/* Desktop Menu */}
-                    <div className="hidden lg:flex items-center gap-8">
+                    <div className="hidden lg:flex items-center gap-6">
                         {/* Navigation Links */}
-                        <div className="flex items-center gap-8 text-sm font-bold uppercase tracking-wide text-slate-600">
+                        <div className="flex items-center gap-6 text-[11px] font-black uppercase tracking-widest text-slate-600">
                             {[
                                 { name: 'Home', href: '/', active: true },
                                 { name: 'About Us', href: '/about-us', active: false },
@@ -56,9 +55,9 @@ export default function PublicLayout({ children }) {
                                 <Link
                                     key={link.name}
                                     href={link.href}
-                                    className={`py-2 border-b-2 transition-all duration-300 ${link.active
-                                        ? 'text-orange-600 border-orange-500'
-                                        : 'border-transparent hover:text-orange-600 hover:border-orange-200'
+                                    className={`py-1 border-b-[3px] transition-all duration-300 ${link.active
+                                        ? 'text-orange-600 border-orange-600'
+                                        : 'border-transparent hover:text-orange-600 hover:border-orange-100'
                                         }`}
                                 >
                                     {link.name}
@@ -67,13 +66,15 @@ export default function PublicLayout({ children }) {
                         </div>
 
                         {/* Search / Action */}
-                        <button className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 hover:bg-orange-600 hover:text-white transition-all shadow-sm">
-                            <Search className="w-5 h-5" />
-                        </button>
+                        <div className="flex items-center gap-3 ml-2">
+                            <button className="w-8 h-8 rounded-md bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:bg-orange-600 hover:text-white hover:border-orange-600 transition-all">
+                                <Search className="w-4 h-4" />
+                            </button>
 
-                        <Link href="/contact-us" className="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-orange-200 hover:bg-slate-800 hover:shadow-slate-200 transition-all transform hover:-translate-y-0.5">
-                            Contact Us
-                        </Link>
+                            <Link href="/contact-us" className="bg-orange-600 text-white px-5 py-2 rounded-md font-black text-[11px] uppercase tracking-wider shadow-md shadow-orange-200 hover:bg-slate-900 hover:shadow-none transition-all">
+                                Contact Us
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -81,13 +82,13 @@ export default function PublicLayout({ children }) {
                         className="lg:hidden p-2 text-slate-600 hover:text-orange-600 transition-colors"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     >
-                        {isMobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+                        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
                 </div>
 
                 {/* Mobile Menu Dropdown */}
                 <div className={`lg:hidden bg-white border-t border-slate-100 overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'}`}>
-                    <div className="flex flex-col p-6 gap-4">
+                    <div className="flex flex-col p-4 gap-2">
                         {[
                             { name: 'Home', href: '/' },
                             { name: 'About Us', href: '/about-us' },
@@ -100,16 +101,16 @@ export default function PublicLayout({ children }) {
                                 key={item.name}
                                 href={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="text-slate-600 font-bold hover:text-orange-600 hover:bg-orange-50 p-3 rounded-lg transition-colors flex items-center justify-between"
+                                className="text-slate-600 font-bold hover:text-orange-600 hover:bg-orange-50 p-2.5 rounded-md transition-colors flex items-center justify-between text-sm"
                             >
                                 {item.name}
-                                <ChevronRight className="w-4 h-4 opacity-50" />
+                                <ChevronRight className="w-4 h-4 opacity-30" />
                             </Link>
                         ))}
                         <Link
                             href="/contact-us"
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="bg-orange-600 text-white w-full py-3 rounded-lg font-bold shadow-md text-center"
+                            className="bg-orange-600 text-white w-full py-3 mt-2 rounded-md font-black text-center text-sm uppercase tracking-wide"
                         >
                             Contact Us
                         </Link>
@@ -118,27 +119,27 @@ export default function PublicLayout({ children }) {
             </nav>
 
             {/* Main Content */}
-            <main className="pt-0 min-h-screen">
+            <main className="min-h-screen">
                 {children}
             </main>
 
             {/* Footer */}
-            <footer className="bg-slate-900 text-white pt-20 pb-10">
-                <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-4 gap-12 mb-16">
+            <footer className="bg-slate-950 text-white pt-12 pb-6 border-t border-white/5">
+                <div className="container mx-auto px-4">
+                    <div className="grid md:grid-cols-4 gap-8 mb-10">
                         {/* School Info */}
-                        <div className="space-y-6">
+                        <div className="space-y-4">
                             <div className="flex items-center gap-2">
-                                <GraduationCap className="w-8 h-8 text-orange-500" />
-                                <span className="text-2xl font-bold">PPS Purnea</span>
+                                <GraduationCap className="w-6 h-6 text-orange-500" />
+                                <span className="text-xl font-black tracking-tight">Purnea Public School</span>
                             </div>
-                            <p className="text-slate-400 leading-relaxed">
+                            <p className="text-slate-400 text-xs leading-relaxed max-w-xs">
                                 Nurturing young minds to become global citizens. A legacy of excellence in education since 1998.
                             </p>
-                            <div className="flex gap-4">
+                            <div className="flex gap-3 pt-2">
                                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                                    <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all">
-                                        <Icon className="w-5 h-5" />
+                                    <a key={i} href="#" className="w-8 h-8 rounded-md bg-white/5 flex items-center justify-center hover:bg-orange-600 hover:text-white transition-all border border-white/5">
+                                        <Icon className="w-4 h-4" />
                                     </a>
                                 ))}
                             </div>
@@ -146,8 +147,11 @@ export default function PublicLayout({ children }) {
 
                         {/* Quick Links */}
                         <div>
-                            <h4 className="text-lg font-bold mb-6 text-white border-l-4 border-orange-500 pl-3">Quick Links</h4>
-                            <ul className="space-y-4">
+                            <h4 className="text-sm font-black mb-5 text-white uppercase tracking-widest flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full"></span>
+                                Quick Links
+                            </h4>
+                            <ul className="grid grid-cols-1 gap-3">
                                 {[
                                     { name: 'About Us', href: '/about-us' },
                                     { name: 'Admissions', href: '/admissions' },
@@ -157,8 +161,7 @@ export default function PublicLayout({ children }) {
                                     { name: 'Contact Us', href: '/contact-us' }
                                 ].map((link) => (
                                     <li key={link.name}>
-                                        <Link href={link.href} className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
+                                        <Link href={link.href} className="text-slate-400 hover:text-orange-500 transition-colors flex items-center gap-2 text-[11px] font-bold">
                                             {link.name}
                                         </Link>
                                     </li>
@@ -168,18 +171,21 @@ export default function PublicLayout({ children }) {
 
                         {/* Contact Info */}
                         <div>
-                            <h4 className="text-lg font-bold mb-6 text-white border-l-4 border-orange-500 pl-3">Contact Us</h4>
-                            <ul className="space-y-6 text-slate-400">
+                            <h4 className="text-sm font-black mb-5 text-white uppercase tracking-widest flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full"></span>
+                                Contact
+                            </h4>
+                            <ul className="space-y-4 text-slate-400 text-[11px] font-bold">
                                 <li className="flex items-start gap-3">
-                                    <MapPin className="w-5 h-5 text-orange-500 shrink-0 mt-1" />
-                                    <span>Ram Bagh, Purnea,<br />Bihar - 854301, India</span>
+                                    <MapPin className="w-4 h-4 text-orange-500 shrink-0" />
+                                    <span>Ram Bagh, Purnea, Bihar - 854301</span>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <Phone className="w-5 h-5 text-orange-500 shrink-0" />
+                                    <Phone className="w-4 h-4 text-orange-500 shrink-0" />
                                     <span>+91 98765 43210</span>
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <Mail className="w-5 h-5 text-orange-500 shrink-0" />
+                                    <Mail className="w-4 h-4 text-orange-500 shrink-0" />
                                     <span>info@ppspurnea.com</span>
                                 </li>
                             </ul>
@@ -187,31 +193,34 @@ export default function PublicLayout({ children }) {
 
                         {/* Newsletter */}
                         <div>
-                            <h4 className="text-lg font-bold mb-6 text-white border-l-4 border-orange-500 pl-3">Newsletter</h4>
-                            <p className="text-slate-400 mb-6">Subscribe to our newsletter for latest updates and news.</p>
+                            <h4 className="text-sm font-black mb-5 text-white uppercase tracking-widest flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 bg-orange-600 rounded-full"></span>
+                                Newsletter
+                            </h4>
+                            <p className="text-slate-400 text-[10px] mb-4 opacity-80 uppercase font-bold tracking-tight">Stay updated with our latest news.</p>
                             <div className="relative">
                                 <input
                                     type="email"
-                                    placeholder="Your email address"
-                                    className="w-full bg-white/10 border border-white/10 rounded-lg py-3 px-4 text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 transition-colors"
+                                    placeholder="Email Address"
+                                    className="w-full bg-white/5 border border-white/10 rounded-md py-2.5 px-3 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-orange-600 transition-colors"
                                 />
-                                <button className="absolute right-1 top-1 bg-orange-600 text-white p-2 rounded-md hover:bg-orange-700 transition-colors">
-                                    <ChevronRight className="w-4 h-4" />
+                                <button className="absolute right-1 top-1 bg-orange-600 text-white p-1.5 rounded-md hover:bg-orange-700 transition-colors">
+                                    <ChevronRight className="w-3.5 h-3.5" />
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
-                    <p>© {new Date().getFullYear()} PPS Purnea. All rights reserved.</p>
-                    <div className="flex gap-6">
-                        <a href="#" className="hover:text-orange-500 transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-orange-500 transition-colors">Terms of Service</a>
-                        <a href="#" className="hover:text-orange-500 transition-colors">Sitemap</a>
+                    <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-[10px] uppercase font-bold tracking-widest">
+                        <p>© {new Date().getFullYear()} Purnea Public School. All rights reserved.</p>
+                        <div className="flex gap-4">
+                            <a href="#" className="hover:text-orange-500 transition-colors">Privacy</a>
+                            <a href="#" className="hover:text-orange-500 transition-colors">Terms</a>
+                            <a href="#" className="hover:text-orange-500 transition-colors">Sitemap</a>
+                        </div>
                     </div>
                 </div>
-            </footer >
-        </div >
+            </footer>
+        </div>
     );
 }

@@ -8,8 +8,8 @@ export default function ContactUs() {
         <PublicLayout>
             <Head title="Contact Us - PPS Purnea" />
 
-            {/* Hero Section */}
-            <div className="relative py-16 bg-slate-900 overflow-hidden">
+            {/* Hero Section - Compact */}
+            <div className="relative py-12 md:py-14 bg-slate-900 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                     <img
                         src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2070&auto=format&fit=crop"
@@ -17,75 +17,76 @@ export default function ContactUs() {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-5xl md:text-6xl font-black text-white mb-6">Get in <span className="text-orange-500">Touch</span></h1>
-                    <p className="text-xl text-slate-300 max-w-2xl mx-auto font-medium">
-                        Have questions? We're here to help. Reach out to us via any of the channels below.
+                <div className="container mx-auto px-4 relative z-10 text-center">
+                    <span className="text-orange-500 font-black tracking-widest uppercase text-[10px] mb-2 block">Connect With Us</span>
+                    <h1 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tight">Get in <span className="text-orange-500">Touch</span></h1>
+                    <p className="text-sm md:text-lg text-slate-300 max-w-xl mx-auto font-bold leading-relaxed">
+                        Have questions? We're here to help. Reach out via any channel below.
                     </p>
                 </div>
             </div>
 
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-3 gap-12">
-                        {/* Contact Info Cards */}
-                        <div className="lg:col-span-1 space-y-6">
+            <section className="py-10 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-3 gap-8 items-start">
+                        {/* Contact Info - Compact Column */}
+                        <div className="lg:col-span-1 space-y-3">
                             {[
-                                { icon: MapPin, title: "Visit Us", content: "Ram Bagh, Purnea, Bihar - 854301, India", color: "orange" },
-                                { icon: Phone, title: "Call Us", content: "+91 98765 43210 / +91 06454 223344", color: "blue" },
+                                { icon: MapPin, title: "Visit Us", content: "Ram Bagh, Purnea, Bihar - 854301", color: "orange" },
+                                { icon: Phone, title: "Call Us", content: "+91 98765 43210 / 06454-223344", color: "blue" },
                                 { icon: Mail, title: "Email Us", content: "info@ppspurnea.com / admissions@ppspurnea.com", color: "green" },
-                                { icon: Clock, title: "Office Hours", content: "Mon - Sat: 08:00 AM - 04:00 PM", color: "purple" }
+                                { icon: Clock, title: "Work Hours", content: "Mon - Sat: 08:00 AM - 04:00 PM", color: "slate" }
                             ].map((item, idx) => (
-                                <div key={idx} className="bg-slate-50 p-5 rounded-xl border border-slate-100 flex items-start gap-4">
-                                    <div className={`w-11 h-11 bg-${item.color}-100 text-${item.color}-600 rounded-xl flex items-center justify-center shrink-0`}>
-                                        <item.icon className="w-6 h-6" />
+                                <div key={idx} className="bg-slate-50 p-4 rounded-md border border-slate-100 flex items-start gap-4 hover:bg-slate-100 transition-colors">
+                                    <div className="w-10 h-10 bg-white text-slate-900 rounded-md flex items-center justify-center shrink-0 border border-slate-200">
+                                        <item.icon className="w-5 h-5" />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-800 mb-1">{item.title}</h3>
-                                        <p className="text-slate-500 text-sm leading-relaxed">{item.content}</p>
+                                        <h3 className="font-black text-slate-900 text-xs uppercase tracking-tight mb-0.5">{item.title}</h3>
+                                        <p className="text-slate-500 text-[11px] font-bold leading-relaxed">{item.content}</p>
                                     </div>
                                 </div>
                             ))}
 
-                            {/* Social Links */}
-                            <div className="pt-6">
-                                <h4 className="font-bold text-slate-800 mb-4 px-2">Follow Our Updates</h4>
-                                <div className="flex gap-4">
+                            {/* Social Links - Compact */}
+                            <div className="pt-4 space-y-3">
+                                <h4 className="font-black text-slate-900 text-[10px] uppercase tracking-widest px-1">Social Networks</h4>
+                                <div className="flex gap-2">
                                     {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                                        <a key={i} href="#" className="w-12 h-12 rounded-xl bg-slate-900 text-white flex items-center justify-center hover:bg-orange-600 transition-all hover:-translate-y-1 shadow-lg">
-                                            <Icon className="w-5 h-5" />
+                                        <a key={i} href="#" className="w-10 h-10 rounded-md bg-slate-900 text-white flex items-center justify-center hover:bg-orange-600 transition-all border border-slate-800">
+                                            <Icon className="w-4 h-4" />
                                         </a>
                                     ))}
                                 </div>
                             </div>
                         </div>
 
-                        {/* Contact Form */}
+                        {/* Contact Form - Professional Density */}
                         <div className="lg:col-span-2">
-                            <div className="bg-white rounded-2xl shadow-2xl border border-slate-100 p-6 md:p-10">
-                                <div className="flex items-center gap-3 mb-8">
-                                    <div className="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center">
-                                        <MessageSquare className="w-6 h-6" />
+                            <div className="bg-white rounded-md shadow-xl border border-slate-100 p-6 md:p-8">
+                                <div className="flex items-center gap-3 mb-6 border-b border-slate-50 pb-4">
+                                    <div className="w-10 h-10 bg-orange-600/10 text-orange-600 rounded-md flex items-center justify-center border border-orange-500/20">
+                                        <MessageSquare className="w-5 h-5" />
                                     </div>
-                                    <h2 className="text-3xl font-bold text-slate-900">Send us a <span className="text-orange-600">Message</span></h2>
+                                    <h2 className="text-xl md:text-2xl font-black text-slate-900 uppercase tracking-tight leading-none">Send a <span className="text-orange-600">Message</span></h2>
                                 </div>
 
-                                <form className="grid md:grid-cols-2 gap-6">
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-700 ml-1">Full Name</label>
-                                        <input type="text" placeholder="John Doe" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all" />
+                                <form className="grid md:grid-cols-2 gap-4">
+                                    <div className="space-y-1.5">
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Full Name</label>
+                                        <input type="text" placeholder="John Doe" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold" />
                                     </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-700 ml-1">Email Address</label>
-                                        <input type="email" placeholder="john@example.com" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all" />
+                                    <div className="space-y-1.5">
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Email Address</label>
+                                        <input type="email" placeholder="john@example.com" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold" />
                                     </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-700 ml-1">Phone Number</label>
-                                        <input type="tel" placeholder="+91 98765 43210" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all" />
+                                    <div className="space-y-1.5">
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Phone Number</label>
+                                        <input type="tel" placeholder="+91 98765 43210" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold" />
                                     </div>
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-700 ml-1">Subject</label>
-                                        <select className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all text-slate-500 appearance-none">
+                                    <div className="space-y-1.5">
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Subject</label>
+                                        <select className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold text-slate-500 appearance-none cursor-pointer">
                                             <option>General Enquiry</option>
                                             <option>Admission Related</option>
                                             <option>Academics Related</option>
@@ -93,13 +94,13 @@ export default function ContactUs() {
                                             <option>Feedback</option>
                                         </select>
                                     </div>
-                                    <div className="md:col-span-2 space-y-2">
-                                        <label className="text-sm font-bold text-slate-700 ml-1">Your Message</label>
-                                        <textarea rows="5" placeholder="How can we help you?" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-500/10 transition-all"></textarea>
+                                    <div className="md:col-span-2 space-y-1.5">
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-1">Your Message</label>
+                                        <textarea rows="4" placeholder="How can we help you?" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold"></textarea>
                                     </div>
-                                    <div className="md:col-span-2 pt-4">
-                                        <button className="w-full bg-orange-600 text-white font-black py-5 rounded-2xl shadow-xl shadow-orange-600/30 hover:bg-orange-700 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 text-lg uppercase tracking-wider">
-                                            <Send className="w-6 h-6" />
+                                    <div className="md:col-span-2 pt-2">
+                                        <button className="w-full bg-slate-950 text-white font-black py-4 rounded-md shadow-lg shadow-black/10 hover:bg-orange-600 transition-all flex items-center justify-center gap-2 text-xs uppercase tracking-widest">
+                                            <Send className="w-4 h-4" />
                                             Send Message Now
                                         </button>
                                     </div>
@@ -110,14 +111,15 @@ export default function ContactUs() {
                 </div>
             </section>
 
-            {/* Google Maps Placeholder */}
-            <section className="h-[500px] w-full bg-slate-200 relative grayscale hover:grayscale-0 transition-all duration-700">
-                <div className="absolute inset-0 flex items-center justify-center bg-slate-900/10 backdrop-blur-[2px]">
-                    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-2xl text-center max-w-sm border border-slate-100 animate-fade-in-up mx-4">
-                        <MapPin className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                        <h3 className="text-xl font-bold text-slate-800 mb-2">Find Us on Google Maps</h3>
-                        <p className="text-slate-500 text-sm mb-6">Experience our campus in person. We are located in the heart of Purnea.</p>
-                        <a href="https://goo.gl/maps/placeholder" target="_blank" rel="noopener noreferrer" className="inline-block bg-slate-900 text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition-colors">
+            {/* Map Section - Industrial Style */}
+            <section className="h-[400px] w-full bg-slate-200 relative grayscale hover:grayscale-0 transition-all duration-1000">
+                <div className="absolute inset-0 flex items-center justify-center bg-slate-950/20 backdrop-blur-[1px]">
+                    <div className="bg-white p-6 md:p-8 rounded-md shadow-2xl text-center max-w-sm border border-slate-100 mx-4 relative overflow-hidden group">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-orange-600"></div>
+                        <MapPin className="w-10 h-10 text-orange-600 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                        <h3 className="text-lg font-black text-slate-900 mb-2 uppercase tracking-tight">Locate Our Campus</h3>
+                        <p className="text-slate-500 text-[11px] font-bold mb-6 uppercase tracking-wide leading-relaxed opacity-80">Rambagh, Purnea. Visit us to experience our infrastructure first-hand.</p>
+                        <a href="https://goo.gl/maps/placeholder" target="_blank" rel="noopener noreferrer" className="inline-block bg-slate-950 text-white px-8 py-3 rounded-md font-black text-[10px] uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-lg">
                             Get Directions
                         </a>
                     </div>

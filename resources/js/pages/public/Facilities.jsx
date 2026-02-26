@@ -8,8 +8,8 @@ export default function Facilities() {
         <PublicLayout>
             <Head title="Facilities - PPS Purnea" />
 
-            {/* Hero Section */}
-            <div className="relative py-16 bg-slate-900 overflow-hidden">
+            {/* Hero Section - Compact */}
+            <div className="relative py-12 md:py-14 bg-slate-900 overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                     <img
                         src="https://images.unsplash.com/photo-1541829070764-84a7d30dee3f?q=80&w=2070&auto=format&fit=crop"
@@ -17,44 +17,47 @@ export default function Facilities() {
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-5xl md:text-6xl font-black text-white mb-6">World-Class <span className="text-orange-500">Infrastructure</span></h1>
-                    <p className="text-xl text-slate-300 max-w-2xl mx-auto font-medium">
+                <div className="container mx-auto px-4 relative z-10 text-center">
+                    <span className="text-orange-500 font-black tracking-widest uppercase text-[10px] mb-2 block">Our Campus</span>
+                    <h1 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tight">World-Class <span className="text-orange-500">Infrastructure</span></h1>
+                    <p className="text-sm md:text-lg text-slate-300 max-w-xl mx-auto font-bold leading-relaxed">
                         Creating the perfect environment for learning, discovery, and personal growth.
                     </p>
                 </div>
             </div>
 
-            {/* Smart Learning */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Smart Learning - Compact Side-by-Side */}
+            <section className="py-10 bg-white border-b border-slate-100">
+                <div className="container mx-auto px-4">
+                    <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
                         <div className="relative">
-                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop" alt="Smart Classroom" className="rounded-2xl shadow-2xl" />
-                            <div className="absolute -top-8 -left-8 bg-blue-600 text-white p-6 rounded-xl shadow-xl hidden lg:block">
-                                <Terminal className="w-10 h-10 mb-2" />
-                                <p className="font-bold">Smart Tech</p>
-                                <p className="text-xs text-blue-100 uppercase tracking-widest">In Every Room</p>
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2070&auto=format&fit=crop" alt="Smart Classroom" className="rounded-md shadow-lg border border-slate-100" />
+                            <div className="absolute -bottom-4 -right-4 bg-blue-600 text-white p-4 rounded-md shadow-xl hidden lg:block border border-white/20">
+                                <Terminal className="w-8 h-8 mb-1" />
+                                <p className="font-black text-xs uppercase tracking-tight">Smart Tech</p>
+                                <p className="text-[10px] text-blue-100 uppercase tracking-widest opacity-80">Full Campus</p>
                             </div>
                         </div>
-                        <div className="space-y-6">
-                            <span className="text-orange-600 font-bold tracking-widest uppercase text-sm mb-2 block">Modern Classrooms</span>
-                            <h2 className="text-4xl font-bold text-slate-900">Digital-First <span className="text-blue-600">Learning Spaces</span></h2>
-                            <p className="text-slate-600 text-lg leading-relaxed">
-                                Our classrooms are equipped with interactive smart boards, high-speed internet, and ergonomic furniture, ensuring that students stay engaged and comfortable during their learning journey.
+                        <div className="space-y-5">
+                            <div className="space-y-2">
+                                <span className="text-orange-600 font-black tracking-widest uppercase text-[10px] block">Modern Classrooms</span>
+                                <h2 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight">Digital-First Spaces</h2>
+                            </div>
+                            <p className="text-slate-600 text-sm font-medium leading-relaxed">
+                                Our classrooms are equipped with interactive smart boards, high-speed internet, and ergonomic furniture, ensuring students stay engaged and comfortable.
                             </p>
-                            <div className="grid grid-cols-2 gap-6 pt-4">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center shrink-0">
-                                        <Layout className="w-5 h-5" />
+                            <div className="grid grid-cols-2 gap-4 pt-2">
+                                <div className="flex items-center gap-3 bg-slate-50 p-3 rounded-md border border-slate-100">
+                                    <div className="w-8 h-8 bg-white text-blue-600 rounded-md flex items-center justify-center shrink-0 border border-slate-200">
+                                        <Layout className="w-4 h-4" />
                                     </div>
-                                    <span className="font-bold text-slate-800 text-sm">Interactive Boards</span>
+                                    <span className="font-black text-slate-800 text-[10px] uppercase tracking-wide">Smart Boards</span>
                                 </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0">
-                                        <Terminal className="w-5 h-5" />
+                                <div className="flex items-center gap-3 bg-slate-50 p-3 rounded-md border border-slate-100">
+                                    <div className="w-8 h-8 bg-white text-blue-600 rounded-md flex items-center justify-center shrink-0 border border-slate-200">
+                                        <Terminal className="w-4 h-4" />
                                     </div>
-                                    <span className="font-bold text-slate-800 text-sm">Wi-Fi Campus</span>
+                                    <span className="font-black text-slate-800 text-[10px] uppercase tracking-wide">Wi-Fi Campus</span>
                                 </div>
                             </div>
                         </div>
@@ -62,31 +65,31 @@ export default function Facilities() {
                 </div>
             </section>
 
-            {/* Main Facilities Grid */}
-            <section className="py-16 bg-slate-50">
-                <div className="container mx-auto px-6">
-                    <div className="text-center mb-16 max-w-2xl mx-auto">
-                        <h2 className="text-4xl font-bold text-slate-900 mb-6">Explore Our <span className="text-orange-600">Campus Highlights</span></h2>
-                        <p className="text-slate-600">Everything a student needs to excel academically and nurture their talents.</p>
+            {/* Main Facilities Grid - Professional Density */}
+            <section className="py-10 bg-slate-50">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-10 max-w-xl mx-auto space-y-2">
+                        <span className="text-blue-600 font-black tracking-widest uppercase text-[10px] block">Highlights</span>
+                        <h2 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight">Campus Facilities</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {[
-                            { icon: Microscope, title: "Modern Science Labs", desc: "State-of-the-art physics, chemistry, and biology labs for practical mastery.", bg: "bg-blue-500" },
-                            { icon: BookOpen, title: "Digital Library", desc: "A vast collection of over 20,000 books, journals, and digital resources.", bg: "bg-orange-500" },
-                            { icon: Activity, title: "Sports Complex", desc: "Basketball courts, cricket nets, and indoor sports facilities.", bg: "bg-green-600" },
-                            { icon: Music, title: "Performing Arts Studio", desc: "Dedicated space for training in music, dance, and theater.", bg: "bg-purple-600" },
-                            { icon: Bus, title: "GPS-Enabled Transport", desc: "Safe and secure transport covering all corners of Purnea.", bg: "bg-red-500" },
-                            { icon: ShieldCheck, title: "CCTV Surveillance", desc: "24/7 security with 200+ cameras and trained security personnel.", bg: "bg-slate-800" }
+                            { icon: Microscope, title: "Modern Science Labs", desc: "State-of-the-art physics, chemistry, and biology labs for practical mastery.", bg: "bg-blue-600" },
+                            { icon: BookOpen, title: "Digital Library", desc: "A vast collection of over 20,000 books, journals, and digital resources.", bg: "bg-orange-600" },
+                            { icon: Activity, title: "Sports Complex", desc: "Basketball courts, cricket nets, and indoor sports facilities.", bg: "bg-green-700" },
+                            { icon: Music, title: "Arts Studio", desc: "Dedicated space for training in music, dance, and theater.", bg: "bg-purple-700" },
+                            { icon: Bus, title: "Secure Transport", desc: "GPS-Enabled transport covering all corners of Purnea safely.", bg: "bg-red-600" },
+                            { icon: ShieldCheck, title: "24/7 Security", desc: "CCTV surveillance with 200+ cameras and trained personnel.", bg: "bg-slate-900" }
                         ].map((fac, idx) => (
-                            <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group">
-                                <div className={`${fac.bg} h-40 flex items-center justify-center relative overflow-hidden`}>
-                                    <fac.icon className="w-20 h-20 text-white opacity-20 absolute rotate-12 -right-4 -bottom-4 group-hover:scale-125 transition-transform" />
-                                    <fac.icon className="w-16 h-16 text-white relative z-10" />
+                            <div key={idx} className="bg-white rounded-md overflow-hidden border border-slate-100 shadow-sm hover:shadow-md transition-all group">
+                                <div className={`${fac.bg} h-32 flex items-center justify-center relative overflow-hidden`}>
+                                    <fac.icon className="w-16 h-16 text-white opacity-10 absolute rotate-12 -right-2 -bottom-2 group-hover:scale-110 transition-transform" />
+                                    <fac.icon className="w-10 h-10 text-white relative z-10" />
                                 </div>
-                                <div className="p-8">
-                                    <h3 className="text-xl font-bold text-slate-800 mb-3">{fac.title}</h3>
-                                    <p className="text-slate-500 text-sm leading-relaxed">{fac.desc}</p>
+                                <div className="p-5">
+                                    <h3 className="text-base font-black text-slate-900 mb-1.5 uppercase tracking-tight">{fac.title}</h3>
+                                    <p className="text-slate-500 text-[11px] font-bold leading-relaxed italic">"{fac.desc}"</p>
                                 </div>
                             </div>
                         ))}
@@ -94,46 +97,46 @@ export default function Facilities() {
                 </div>
             </section>
 
-            {/* Safety & Wellness */}
-            <section className="py-16 bg-white">
-                <div className="container mx-auto px-6">
-                    <div className="bg-slate-900 rounded-3xl p-6 md:p-12 text-white flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
+            {/* Safety & Wellness - Compact Overlay Style */}
+            <section className="py-10 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="bg-slate-900 rounded-md p-6 md:p-10 text-white flex flex-col md:flex-row items-center gap-10 overflow-hidden relative border border-white/5">
                         {/* Decorative Background */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                        <div className="absolute top-0 right-0 w-48 h-48 bg-orange-600/10 rounded-full blur-3xl -mr-24 -mt-24"></div>
 
-                        <div className="md:w-1/2 space-y-6">
-                            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-orange-400 text-xs font-bold uppercase tracking-widest border border-white/5">
-                                <Heart className="w-3 h-3" /> Priority #1
+                        <div className="md:w-1/2 space-y-5 relative z-10">
+                            <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-white/5 rounded-md text-orange-500 text-[9px] font-black uppercase tracking-widest border border-white/10">
+                                <Heart className="w-3 h-3" /> Safety First
                             </div>
-                            <h2 className="text-4xl font-bold">Student <span className="text-orange-500">Wellness & Safety</span></h2>
-                            <p className="text-slate-300 text-lg leading-relaxed">
-                                We prioritize healthy living with an in-house medical clinic, nutritious cafeteria options, and a 100% RO-water purification system throughout the campus.
+                            <h2 className="text-2xl md:text-3xl font-black uppercase tracking-tight">Student <span className="text-orange-500">Wellness</span></h2>
+                            <p className="text-slate-400 text-xs font-bold leading-relaxed">
+                                We prioritize healthy living with an in-house medical clinic, nutritious cafeteria options, and a 100% RO-water purification system.
                             </p>
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-4">
-                                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shrink-0">
-                                        <ShieldCheck className="w-4 h-4 text-white" />
-                                    </div>
-                                    <span className="font-bold text-slate-100">Full-time Nursing Staff</span>
+                            <div className="space-y-3">
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                                    <span className="font-black text-[10px] text-slate-200 uppercase tracking-wide">Full-time Nursing Staff</span>
                                 </div>
-                                <div className="flex items-center gap-4">
-                                    <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shrink-0">
-                                        <ShieldCheck className="w-4 h-4 text-white" />
-                                    </div>
-                                    <span className="font-bold text-slate-100">Hygienic Vegetarian Canteen</span>
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                                    <span className="font-black text-[10px] text-slate-200 uppercase tracking-wide">Hygienic Vegetarian Canteen</span>
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-1/2 grid grid-cols-2 gap-4">
-                            <div className="bg-white/5 p-8 rounded-2xl text-center border border-white/10 hover:bg-white/10 transition-colors">
-                                <Coffee className="w-10 h-10 text-orange-500 mx-auto mb-4" />
-                                <h4 className="font-bold text-lg">Cafeteria</h4>
-                                <p className="text-xs text-slate-400 mt-2">Nutritious Meals</p>
+                        <div className="md:w-1/2 grid grid-cols-2 gap-3 w-full relative z-10">
+                            <div className="bg-white/5 p-6 rounded-md text-center border border-white/10 hover:bg-white/10 transition-colors">
+                                <div className="w-10 h-10 bg-orange-600/20 text-orange-500 rounded-md flex items-center justify-center mx-auto mb-3 border border-orange-500/20">
+                                    <Coffee className="w-5 h-5" />
+                                </div>
+                                <h4 className="font-black text-xs uppercase tracking-tight">Cafeteria</h4>
+                                <p className="text-[9px] text-slate-500 font-bold mt-1 uppercase">Nutritious</p>
                             </div>
-                            <div className="bg-white/5 p-8 rounded-2xl text-center border border-white/10 hover:bg-white/10 transition-colors">
-                                <Heart className="w-10 h-10 text-red-500 mx-auto mb-4" />
-                                <h4 className="font-bold text-lg">Infirmary</h4>
-                                <p className="text-xs text-slate-400 mt-2">Medical Care</p>
+                            <div className="bg-white/5 p-6 rounded-md text-center border border-white/10 hover:bg-white/10 transition-colors">
+                                <div className="w-10 h-10 bg-red-600/20 text-red-500 rounded-md flex items-center justify-center mx-auto mb-3 border border-red-500/20">
+                                    <Heart className="w-5 h-5" />
+                                </div>
+                                <h4 className="font-black text-xs uppercase tracking-tight">Infirmary</h4>
+                                <p className="text-[9px] text-slate-500 font-bold mt-1 uppercase">Medical Care</p>
                             </div>
                         </div>
                     </div>
@@ -142,3 +145,21 @@ export default function Facilities() {
         </PublicLayout>
     );
 }
+
+const CheckCircle2 = (props) => (
+    <svg
+        {...props}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+        <path d="m9 12 2 2 4-4" />
+    </svg>
+)
