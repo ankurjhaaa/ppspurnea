@@ -1,142 +1,151 @@
 import React from 'react';
 import PublicLayout from '@/layouts/PublicLayout';
-import { Head } from '@inertiajs/react';
-import { ClipboardCheck, FileText, Calendar, Phone, Mail, ArrowRight, Download, CheckCircle2 } from 'lucide-react';
+import { Head, Link } from '@inertiajs/react';
+import { ClipboardCheck, FileText, Calendar, Phone, Mail, ArrowRight, Download, CheckCircle2, GraduationCap } from 'lucide-react';
 
 export default function Admissions() {
     return (
         <PublicLayout>
-            <Head title="Admissions - PPS Purnea" />
+            <Head title="Admissions - Purnea Public School" />
 
-            {/* Hero Section - Compact */}
-            <div className="relative py-12 md:py-14 bg-slate-900 overflow-hidden">
-                <div className="absolute inset-0 opacity-20">
-                    <img
-                        src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop"
-                        alt="Admission"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
-                    <span className="text-orange-500 font-black tracking-widest uppercase text-[10px] mb-2 block">Enroll Your Child</span>
-                    <h1 className="text-3xl md:text-5xl font-black text-white mb-4 uppercase tracking-tight">Join the <span className="text-orange-500">PPS Family</span></h1>
-                    <p className="text-sm md:text-lg text-slate-300 max-w-xl mx-auto font-bold leading-relaxed">
-                        Admissions now open for Academic Year 2024-25. Shape your child's future with us.
-                    </p>
-                </div>
-            </div>
-
-            {/* Admission Process - Step Grid */}
-            <section className="py-10 bg-white border-b border-slate-100">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-2xl mx-auto text-center mb-10 space-y-2">
-                        <span className="text-orange-600 font-black tracking-widest uppercase text-[10px] block">Step-by-Step Guide</span>
-                        <h2 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight">Admission Process</h2>
+            {/* 1. HERO SECTION: Clean & Welcoming */}
+            <section className="bg-white pt-10 pb-20">
+                <div className="container mx-auto px-6 text-center">
+                    <div className="max-w-4xl mx-auto space-y-8 mb-16">
+                        <span className="inline-block px-4 py-1.5 bg-orange-50 text-orange-600 font-black text-[10px] uppercase tracking-[0.3em] rounded-full">
+                            Enrollment 2024-25
+                        </span>
+                        <h1 className="text-5xl md:text-8xl font-black text-slate-950 uppercase tracking-tighter leading-[0.95]">
+                            Start Your <br />
+                            <span className="text-orange-600">PPS Journey</span>
+                        </h1>
+                        <p className="text-slate-400 text-sm md:text-xl font-bold max-w-2xl mx-auto leading-relaxed uppercase tracking-widest opacity-80">
+                            Join a community dedicated to excellence, character, and global citizenship. Admissions now open.
+                        </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white group">
+                        <img
+                            src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?q=80&w=2070&auto=format&fit=crop"
+                            alt="Admission Process"
+                            className="w-full h-[400px] md:h-[600px] object-cover transition-transform duration-1000 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-linear-to-t from-slate-950/40 to-transparent"></div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 2. ADMISSION PROCESS: Step Cards */}
+            <section className="py-24 bg-slate-50">
+                <div className="container mx-auto px-6">
+                    <div className="text-center mb-20 max-w-3xl mx-auto space-y-4">
+                        <span className="text-orange-600 font-black tracking-[0.3em] uppercase text-[10px] block">Path to Enrollment</span>
+                        <h2 className="text-4xl md:text-5xl font-black text-slate-950 uppercase tracking-tighter">Our Admission Process</h2>
+                        <div className="w-20 h-1.5 bg-orange-600 mx-auto rounded-full mt-6"></div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { step: "01", title: "Enquiry", desc: "Fill out the online inquiry form or visit the campus.", icon: Mail },
-                            { step: "02", title: "Counseling", desc: "Meet our counselors to understand the curriculum.", icon: Phone },
-                            { step: "03", title: "Assessment", desc: "A minor assessment to check the child's readiness.", icon: ClipboardCheck },
-                            { step: "04", title: "Document", desc: "Finalize admission with documents and fees.", icon: FileText }
-                        ].map((item, idx) => (
-                            <div key={idx} className="bg-slate-50 p-6 rounded-md border border-slate-100 relative z-10 hover:bg-white hover:shadow-md transition-all group">
-                                <div className="w-10 h-10 bg-orange-600 text-white rounded-md flex items-center justify-center font-black mb-4 shadow-md shadow-orange-600/20 text-sm">
+                            { step: "01", title: "ENQUIRY", desc: "Submit an online enquiry or visit our Ram Bagh campus." },
+                            { step: "02", title: "COUNSELING", desc: "Connect with our educators to understand the PPS model." },
+                            { step: "03", title: "ASSESSMENT", desc: "A brief interaction to assess readiness and grade level." },
+                            { step: "04", title: "ENROLLMENT", desc: "Complete documentation and finalize the admission." }
+                        ].map((item, i) => (
+                            <div key={i} className="bg-white p-10 rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-all duration-300 group">
+                                <div className="w-14 h-14 bg-slate-950 text-white rounded-2xl flex items-center justify-center font-black mb-8 text-sm group-hover:bg-orange-600 transition-colors">
                                     {item.step}
                                 </div>
-                                <h3 className="text-base font-black mb-2 text-slate-900 uppercase tracking-tight">{item.title}</h3>
-                                <p className="text-slate-500 font-bold text-[11px] leading-relaxed italic">"{item.desc}"</p>
+                                <h3 className="text-xs font-black mb-4 text-slate-950 uppercase tracking-[0.2em]">{item.title}</h3>
+                                <p className="text-slate-400 font-bold text-[10px] leading-relaxed uppercase tracking-widest opacity-80">
+                                    {item.desc}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Requirements & Form - Compact Grid */}
-            <section className="py-10 bg-slate-50">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
-                        <div className="lg:w-1/2 space-y-6">
-                            <div className="space-y-2">
-                                <span className="text-orange-600 font-black tracking-widest uppercase text-[10px] block">Checklist</span>
-                                <h2 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tight leading-tight">Required <span className="text-orange-600">Documents</span></h2>
+            {/* 3. REQUIREMENTS & FORM: Clean Two-Column */}
+            <section className="py-24 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="flex flex-col lg:flex-row gap-20 items-start">
+                        {/* lhs: documents */}
+                        <div className="lg:w-1/2 space-y-12">
+                            <div className="space-y-4">
+                                <span className="text-orange-600 font-black tracking-[0.3em] uppercase text-[10px] block">Checklist</span>
+                                <h2 className="text-4xl md:text-6xl font-black text-slate-950 uppercase tracking-tighter leading-none">Mandatory <br /> <span className="text-orange-600">Documents</span></h2>
                             </div>
-                            <p className="text-slate-600 text-sm font-medium leading-relaxed">
-                                Please ensure you have all the original documents and photocopies ready for the admission process.
-                            </p>
 
-                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 {[
-                                    "Birth Certificate",
-                                    "Transfer Certificate (TC)",
-                                    "Previous Year Report Card",
-                                    "Passport Photographs",
-                                    "Aadhar Card (Child & Parent)",
-                                    "Proof of Address"
-                                ].map((doc, idx) => (
-                                    <li key={idx} className="flex items-center gap-2 text-slate-700 font-black text-[10px] uppercase tracking-wide bg-white p-2.5 rounded-md border border-slate-100 shadow-sm">
-                                        <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
-                                        {doc}
-                                    </li>
+                                    "BIRTH CERTIFICATE",
+                                    "TRANSFER CERTIFICATE",
+                                    "PREVIOUS REPORT CARD",
+                                    "RECENT PHOTOGRAPHS",
+                                    "AADHAR CARD COPIES",
+                                    "RESIDENCE PROOF"
+                                ].map((doc, i) => (
+                                    <div key={i} className="flex items-center gap-4 text-slate-950">
+                                        <CheckCircle2 className="w-5 h-5 text-orange-600 shrink-0" />
+                                        <span className="font-black text-[10px] uppercase tracking-widest">{doc}</span>
+                                    </div>
                                 ))}
-                            </ul>
+                            </div>
 
-                            <button className="flex items-center gap-2 bg-slate-950 text-white px-6 py-3 rounded-md font-black text-[10px] uppercase tracking-widest hover:bg-orange-600 transition-all shadow-lg shadow-black/10 group">
-                                <Download className="w-4 h-4" />
-                                Download Prospectus (PDF)
-                            </button>
+                            <div className="pt-8">
+                                <button className="flex items-center gap-4 bg-slate-950 text-white px-10 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.3em] hover:bg-orange-600 transition-all shadow-2xl shadow-slate-200">
+                                    <Download className="w-5 h-5" />
+                                    Download Prospectus
+                                </button>
+                            </div>
                         </div>
 
-                        <div className="lg:w-1/2 w-full bg-white p-6 md:p-8 rounded-md shadow-xl border border-slate-100 relative">
-                            <h3 className="text-xl font-black text-slate-900 mb-6 uppercase tracking-tight text-center border-b border-slate-50 pb-4">Admission Enquiry Form</h3>
-                            <form className="space-y-3">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                    <input type="text" placeholder="Child's Name" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold" />
-                                    <input type="text" placeholder="Parent's Name" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold" />
-                                </div>
-                                <select className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-slate-500 text-xs font-bold appearance-none cursor-pointer">
-                                    <option>Select Grade Applying For</option>
-                                    <option>Pre-Nursery</option>
-                                    <option>Nursery - KG</option>
-                                    <option>Class 1 - 12</option>
-                                </select>
-                                <input type="tel" placeholder="Mobile Number" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold" />
-                                <textarea placeholder="Questions/Requirements" rows="3" className="w-full bg-slate-50 border border-slate-200 rounded-md px-4 py-3 focus:outline-none focus:border-orange-500 transition-all text-xs font-bold"></textarea>
-                                <button className="w-full bg-orange-600 text-white font-black py-4 rounded-md shadow-lg shadow-orange-600/20 hover:bg-slate-950 transition-all text-xs uppercase tracking-widest mt-2">
-                                    Submit Inquiry
-                                </button>
-                            </form>
+                        {/* rhs: form */}
+                        <div className="lg:w-1/2 w-full">
+                            <div className="bg-slate-50 p-8 md:p-14 rounded-[3rem] border border-slate-100 shadow-2xl shadow-slate-100/50">
+                                <h3 className="text-2xl font-black text-slate-950 mb-10 uppercase tracking-tighter text-center">Inquiry Form</h3>
+                                <form className="space-y-4">
+                                    <div className="grid md:grid-cols-2 gap-4">
+                                        <input type="text" placeholder="CHILD NAME" className="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 focus:outline-none focus:border-orange-500 text-[10px] font-black placeholder-slate-400 uppercase tracking-widest" />
+                                        <input type="text" placeholder="PARENT NAME" className="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 focus:outline-none focus:border-orange-500 text-[10px] font-black placeholder-slate-400 uppercase tracking-widest" />
+                                    </div>
+                                    <select className="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 focus:outline-none focus:border-orange-500 text-[10px] font-black text-slate-400 appearance-none cursor-pointer uppercase tracking-widest">
+                                        <option>SELECT GRADE</option>
+                                        <option>PLAYGROUP</option>
+                                        <option>PRIMARY</option>
+                                        <option>MIDDLE</option>
+                                        <option>HIGH SCHOOL</option>
+                                    </select>
+                                    <input type="tel" placeholder="PHONE NUMBER" className="w-full bg-white border border-slate-200 rounded-xl px-6 py-4 focus:outline-none focus:border-orange-500 text-[10px] font-black placeholder-slate-400 uppercase tracking-widest" />
+                                    <button className="w-full bg-orange-600 text-white font-black py-5 rounded-2xl shadow-2xl shadow-orange-100 hover:bg-slate-950 transition-all text-xs uppercase tracking-[0.4em] mt-4">
+                                        Submit Request
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Assistance Section - Compact */}
-            <div className="py-10 bg-slate-950 text-white border-t border-white/5">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20">
-                        <div className="flex items-center gap-4 group">
-                            <div className="w-12 h-12 bg-white/5 rounded-md flex items-center justify-center border border-white/10 group-hover:bg-orange-600 group-hover:border-orange-600 transition-all duration-300">
-                                <Calendar className="w-6 h-6 text-white" />
-                            </div>
-                            <div>
-                                <p className="font-black text-xs uppercase tracking-widest text-slate-400 mb-1">Office Hours</p>
-                                <p className="font-black text-sm uppercase">Mon - Sat: 08:00 AM - 04:00 PM</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4 group">
-                            <div className="w-12 h-12 bg-white/5 rounded-md flex items-center justify-center border border-white/10 group-hover:bg-blue-600 group-hover:border-blue-600 transition-all duration-300">
-                                <Phone className="w-6 h-6 text-white" />
-                            </div>
-                            <div>
-                                <p className="font-black text-xs uppercase tracking-widest text-slate-400 mb-1">Admission Desk</p>
-                                <p className="font-black text-sm uppercase">+91 98765 43210</p>
-                            </div>
+            {/* 4. FINAL CTA: Super Clean White */}
+            <section className="py-32 bg-slate-50">
+                <div className="container mx-auto px-6 text-center">
+                    <div className="max-w-4xl mx-auto space-y-12">
+                        <GraduationCap className="w-16 h-16 text-orange-600 mx-auto" />
+                        <h2 className="text-5xl md:text-8xl font-black text-slate-950 uppercase tracking-tighter leading-none">
+                            Shape Their <br /> <span className="text-orange-600">Future Today</span>
+                        </h2>
+                        <div className="flex flex-col sm:flex-row justify-center gap-8 pt-10">
+                            <Link href="/contact-us" className="bg-slate-950 text-white px-12 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.4em] hover:bg-orange-600 transition-all shadow-2xl shadow-slate-200">
+                                Contact Admissions
+                            </Link>
+                            <button className="bg-white text-slate-950 border border-slate-200 px-12 py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.4em] hover:bg-slate-50 transition-all">
+                                Office Locations
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </PublicLayout>
     );
 }
