@@ -33,7 +33,7 @@ export default function PublicLayout({ children }) {
                         </div>
                         <div className="flex flex-col">
                             <span className="text-2xl font-bold leading-none text-slate-800 tracking-tight group-hover:text-orange-600 transition-colors">
-                                PPS <span className="text-orange-600">Purnea</span>
+                                Purnea Public <span className="text-orange-600">School</span>
                             </span>
                             <span className="text-[10px] font-bold tracking-widest uppercase text-slate-400">
                                 Excellence in Education

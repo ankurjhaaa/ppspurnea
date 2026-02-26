@@ -18,7 +18,7 @@ export default function Home() {
             <Head title="Home" />
 
             {/* 1. HERO SECTION: Full Screen & Dark */}
-            <div className="relative min-h-[90vh] flex items-center bg-slate-900 overflow-hidden pt-16 pb-16 lg:pt-0 lg:pb-0">
+            <div className="relative min-h-[90vh] flex items-center bg-slate-900 overflow-hidden pt-16 pb-16 lg:pt-0 lg:pb-0 md:p-10">
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img
